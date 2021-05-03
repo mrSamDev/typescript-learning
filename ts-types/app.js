@@ -1,29 +1,20 @@
-// const product: {
-// 	id: string;
-// 	price: number;
-// 	tags: string[];
-// 	details: {
-// 		title: string;
-// 		description: string;
-// 	};
-// } = {
-// 	id: "abc1",
-// 	price: 12.99,
-// 	tags: ["great-offer", "hot-and-new"],
-// 	details: {
-// 		title: "Red Carpet",
-// 		description: "A great carpet - almost brand-new!",
-// 	},
-// };
-var Roles;
-(function (Roles) {
-    Roles["ADMIN"] = "qw";
-    Roles[Roles["READ_ONLY"] = 2] = "READ_ONLY";
-    Roles["AUTHOR"] = "dsa";
-})(Roles || (Roles = {}));
-var persons = {
-    name: "sijo",
-    age: 24,
-    hobbies: ["Coding", "Reading"],
-    role: Roles.ADMIN
+function add(n1, n2) {
+    return n1 + n2;
+}
+var printResult = function (num) {
+    console.log("RESULT as", num);
 };
+function addAndandle(n1, n2, cb) {
+    cb(n1 + n2);
+}
+printResult(add(1, 2));
+addAndandle(1, 33, printResult);
+var func = add;
+function sendRequest(data, cb) {
+    // ... sending a request with "data"
+    return cb({ data: "Hi there!" });
+}
+sendRequest("Send this!", function (response) {
+    console.log(response);
+    return true;
+});

@@ -1,30 +1,15 @@
-// const product: {
-// 	id: string;
-// 	price: number;
-// 	tags: string[];
-// 	details: {
-// 		title: string;
-// 		description: string;
-// 	};
-// } = {
-// 	id: "abc1",
-// 	price: 12.99,
-// 	tags: ["great-offer", "hot-and-new"],
-// 	details: {
-// 		title: "Red Carpet",
-// 		description: "A great carpet - almost brand-new!",
-// 	},
-// };
+let input: unknown;
+let namse: string;
 
-enum Roles {
-	ADMIN,
-	READ_ONLY,
-	AUTHOR,
+input = "sijo";
+input = 1;
+
+// namse = input; error
+
+if (typeof input === "string") {
+	namse = input;
 }
 
-const persons = {
-	name: "sijo",
-	age: 24,
-	hobbies: ["Coding", "Reading"],
-	role: Roles.ADMIN,
+const genError = (message: string, code: number) => {
+	throw { message, code };
 };
