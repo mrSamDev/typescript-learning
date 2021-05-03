@@ -1,12 +1,30 @@
-function add(n1: number, n2: number, sResult: boolean) {
-	if (sResult) console.log({ n1, n2, result: n1 + n2 });
-	return n1 + n2;
+// const product: {
+// 	id: string;
+// 	price: number;
+// 	tags: string[];
+// 	details: {
+// 		title: string;
+// 		description: string;
+// 	};
+// } = {
+// 	id: "abc1",
+// 	price: 12.99,
+// 	tags: ["great-offer", "hot-and-new"],
+// 	details: {
+// 		title: "Red Carpet",
+// 		description: "A great carpet - almost brand-new!",
+// 	},
+// };
+
+enum Roles {
+	ADMIN,
+	READ_ONLY,
+	AUTHOR,
 }
 
-const n1 = 2;
-const n2 = 5;
-
-const pResult = true;
-
-const result = add(n1, n2, pResult);
-console.log("result: ", result);
+const persons = {
+	name: "sijo",
+	age: 24,
+	hobbies: ["Coding", "Reading"],
+	role: Roles.ADMIN,
+};
