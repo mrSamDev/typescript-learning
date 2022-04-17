@@ -17,14 +17,14 @@
 // };
 
 enum Roles {
-	ADMIN,
-	READ_ONLY,
-	AUTHOR,
+  ADMIN,
+  READ_ONLY,
+  AUTHOR,
 }
 
 const persons = {
-	name: "sijo",
-	age: 24,
-	hobbies: ["Coding", "Reading"],
-	role: Roles.ADMIN,
+  name: "sijo",
+  age: 24,
+  hobbies: ["Coding", "Reading"],
+  role: Roles.ADMIN,
 };
